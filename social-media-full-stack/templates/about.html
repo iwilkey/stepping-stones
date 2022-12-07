@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock %}
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+	<div id="about">
+		<h1>About</h1>
+		<h4>What is "Threadfeed"?</h4><br>
+		<p>Threadfeed is a public, virtual social experiment
+		<br> open to anyone who wants to participate.
+			<br><br>Threadfeed users can create <i>threads</i> to be voted on by other users.
+			<br>If a user gets an overwhlemingly positive response to their thread, 
+			<br>it could be admitted into the <i>threadweb</i>.
+			<br><br>The theory is that the <i>threadweb</i> will become this amalgamation
+			<br> of everything that somehow connects us.
+			<br>
+			<br>For example, a <i>thread</i> could be some of your favorite song lyrics, 
+			<br>an opinion over a policital occurance, a funny joke, a beautiful quote, 
+			<br>words of encouragement, thoughts on mental health, 
+			<br><i>any</i> statement one can think of that can be reviewed by other users.
+			<br><br>A <i>thread</i> could also reinforce to us what we tend to dislike as well:
+			<br>Hate, prejudice, racism, bigotry, ect
+			<br>In the event they happen, choose to reject them.
+			<br><br>The voting process is simple: a random 
+			<br><i>thread</i> will be pulled from a database and given to 
+			<br>you to be voted on. It's your job to answer honestly.  
+			<br>If it makes you feel good, vote <i class="fa fa-check" style="color: lightgreen;"></i> otherwise, vote <i class="fa fa-times" style="color: red"></i>.
+			<br><br>If this seems at all interesting to you, great!
+			<br>If you would like to continue, it's free, lightweight, and noncommittal.
+			<br><br>Sign up below and make your first thread!
+			<br>Remember, it could be anything.
+			<br>(If nothing comes to mind, just vote on other threads)
+			<br><br>If you have any questions, concerns, or insights 
+			<br>feel free to email <a id="email" href="mailto:threadfeeddotcom@gmail.com">threadfeeddotcom@gmail.com</a>.
+			<br><br><br><a id="started" href="/signup">Sign me up!</a>
+			<br><br><br><p style="font-size: 9">A project by Ian Wilkey started 2020</p>
+		</p>
+	</div>
+{% endblock %}

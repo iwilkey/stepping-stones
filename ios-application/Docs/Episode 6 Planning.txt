@@ -1,0 +1,19 @@
+Flikitt Development Episode 6
+------------------------
+
+Add more functionality to Flikitt
+	- Make toggling frame system (off and on)
+	- Snapping a picture on a frame
+
+Conditions: 
+	- We don't want camera feed if there is already a picture in the frame.
+	- We want a way to delete a picture on a frame (Turn camera UI into X)
+	- We want camera feed in frames that have no capture (If and only if the camera is toggled)
+	- Toggling system for camera, so that you can switch between frames that have
+	pictures and frames that are just drawings?
+
+Thinking of making Frames all have their own canvas?
+If a frame has (hasPicture) true, then
+	- Camera Feed is off.
+	- The frame canvas will aquire a new Image with sprite of the picture just taken
+	

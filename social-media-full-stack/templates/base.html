@@ -1,0 +1,55 @@
+<DOCTYPE html>
+
+<html>
+
+	<head>
+		{% block head %}
+		<link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='threadfeedicon.ico') }}"/>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+  		rel="stylesheet"  type='text/css'>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/mainstyle.css')}}"/>
+		<title>{% block title %}{% endblock %} || Threadfeed</title>
+		{% endblock %}
+	</head>
+
+	<body>
+
+		<div class="head">
+			<img id="bar-logo" src="{{ url_for('static', filename='img/threadfeedlogo.png') }}">
+
+			{% if session.get('username') == None %}
+				<a id="login-link" href="/login">Log in</a>
+				<a id="about-link" href="/about">About</a>
+				<a id="signup-link" href="/signup">Sign up</a>
+			{% else %}
+				<a id="vote-link" href="/vote">Vote</a>
+				<a id="profile-link" href="/profile">Profile</a>
+				<a id="create-link" href="/create">Create</a>
+				<a id="threadweb-link" href="/threadweb">Threadweb</a>
+				<a id="logout-link" href="/login">Log out</a>
+			{% endif %}
+
+		</div>
+
+		<div class="flash">
+			{% for message in get_flashed_messages() %}
+				<p>{{ message }}</p>
+			{% endfor %}
+		</div>
+
+		<div id="content">{% block content %}{% endblock %}</div><br>
+
+		<div class="logo-banner">
+			<img src="{{ url_for('static', filename='img/threadfeedlogo.png') }}">
+			<p>©2020 threadfeed.org, All Rights Reserved.</p>
+			{% if session.get('username') != None %}
+			<a style="color: white; font-size: 9" href="/settings">Profile Settings</a><br><br>
+			{% endif %}
+			<a style="color: white; font-size: 9" href="/about">About</a><br><br>
+		</div>
+
+	</body>
+
+</html>

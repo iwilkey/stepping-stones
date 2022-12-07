@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Threadweb{% endblock %}
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+	<div class="threadweb">
+		<h1>Threadweb</h1>
+
+		<div class="threadweb-threads">
+			<h2>Accepted threads</h2>
+
+			{% if return_all_threadweb_threads() != None %}
+				{% for thread in return_all_threadweb_threads() %}
+					<div class="threadweb-thread">
+						<p id="username">{{ thread[1] }} @ {{ thread[3] }}</p><br>
+						<p>{{ thread[2] }}</p> <br>
+						<i class="fa fa-check" style="color: lightgreen"></i><p style="display: inline"> {{ thread[4] }} || </p>
+						<i class="fa fa-times" style="color: red"></i><p style="display: inline"> {{ thread[5] }}</p><br>
+					</div>
+				{% endfor %}
+			{% else %}
+				<p id="no-thread">There are no threads here yet!<br> Vote on some below</p>
+			{% endif %}
+
+		</div>
+
+	</div>
+
+	<div class="post-new">
+		<form action="/profile" method="post"><br>
+			<a id="govote" href="/vote">Vote!</a>
+		</form>
+	</div>
+{% endblock %}

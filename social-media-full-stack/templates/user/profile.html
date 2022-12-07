@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}My Profile{% endblock %}
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+	<div class="profile">
+		<h1>{{ session.get('username') }}'s profile</h1>
+
+		<div class="threads">
+			<h2>My threads</h2>
+
+			{% if len(return_all_posts(session.get('username'))) > 0 %}
+				{% for post in return_all_posts(session.get('username')) %}
+
+					{% if post[6] == True %}
+						<div class="accepted-thread">
+							<p>{{ post[2] }}</p> <br>
+							<i class="fa fa-check" style="color: lightgreen"></i><p style="display: inline"> {{ post[4] }} || </p>
+							<i class="fa fa-times" style="color: red"></i><p style="display: inline"> {{ post[5] }}</p><br>
+							<form action="/profile" method="post">
+								<button class="btn" type="submit" name="delete" value="{{ post[2] }}"><i class="fa fa-trash"></i></button>
+							</form>
+						</div>
+					{% else %}
+						<div class="thread">
+							<p>{{ post[2] }}</p> <br>
+							<i class="fa fa-check" style="color: lightgreen"></i><p style="display: inline"> {{ post[4] }} || </p>
+							<i class="fa fa-times" style="color: red"></i><p style="display: inline"> {{ post[5] }}</p><br>
+							<form action="/profile" method="post">
+								<button class="btn" type="submit" name="delete" value="{{ post[2] }}"><i class="fa fa-trash"></i></button>
+							</form>
+						</div>
+					{% endif %}
+
+				{% endfor %}
+			{% else %}
+				<p id="no-thread">You have no threads<br> Create one below!</p>
+			{% endif %}
+
+		</div>
+
+	</div>
+
+	<div class="post-new">
+		<form action="/profile" method="post">
+			<input type="submit" value="Create New Thread">
+		</form>
+	</div>
+{% endblock %}

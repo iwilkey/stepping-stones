@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Sign Up{% endblock %}
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+	<div class="sign-in-form">
+		<h1>Sign up</h1>
+		<h4>(It's fast and free!)</h4> <br>
+		<form action="/signup" method="post">
+			<input type="text" placeholder="Enter your email" name="email"><br>
+			<input type="text" placeholder="Choose a username" name="username"><br>
+			<input type="password" placeholder="Choose a password" name="password"><br>
+			<input type="password" placeholder="Type the password again" name="passwordagain"><br>
+
+			<p>Security question</p><br>
+
+			<input type="text" placeholder="Ask a question only you could answer" name="question">
+			<input type="text" placeholder="Answer" name="answer"><br>
+
+
+			<input type="submit" value="Sign up!">
+		</form>
+	</div>
+{% endblock %}

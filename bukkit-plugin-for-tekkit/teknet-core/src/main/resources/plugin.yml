@@ -1,0 +1,31 @@
+name: TeknetCore
+main: io.github.iwilkey.teknetcore.TeknetCore
+version: 1.100.D # 1.1.0 LAST
+commands:
+   lag:
+      description: See the current rate at which the server is processing data.
+      usage: "Use /lag help to learn to use lag!"
+   ranks:
+      description: Admin rank tools.
+      usage: "Use /ranks help to administrate ranks."
+   cooldown:
+      description: See how much time you have until you can send commands or chat.
+      usage: "Use /cooldown to see the cooldown time you currently have."
+   home:
+      description: Teleport back to your home.
+      usage: "Use /home help to learn to use home!"
+   sethome:
+      description: Set the location of your home.
+      usage: "Use /sethome help to learn to use sethome!"
+   position:
+      description: Save and teleport to locations. Use /position help to get started.
+      usage: "Use /position help to learn how to use positions!"
+   shop:
+      description: Use the server store!
+      usage: "Use /shop help to learn to use the shop!"
+   bank:
+      description: Manage your funds.
+      usage: "Use /bank help to learn how to use the bank!"
+   estate:
+      description: Manage your protected property!
+      usage: "Use /estate help to learn how to protect your property!"

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Vote{% endblock %}
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+	<div class="vote">
+		<h1>Vote</h1>
+
+		<div class="votethreads">
+			<div class="votethread">
+				{% if not session.get('tiq') == None %}
+					<p id="username">{{ return_thread(session.get('tiq'))[1] }}</p><br>
+					<p>"{{ return_thread(session.get('tiq'))[2] }}"</p><br>
+
+					<form action="/vote" method="post">
+						<button class="btn" type="submit" name="yes" value="{{ return_thread(session.get('tiq'))[0] }}"><i class="fa fa-check" style="color: lightgreen;"></i></button>
+						<p style="display: inline;"> || </p>
+						<button class="btn" type="submit" name="no" value="{{ return_thread(session.get('tiq'))[0] }}"><i class="fa fa-times" style="color: red"></i></button>
+	 				</form>
+	 			{% else %}
+	 				<p id="username">:(</p><br>
+	 				<p>Unfortunately there aren't any threads available for you to vote on at this time. Please check again later!</p>
+	 			{% endif %}
+
+			</div>
+		</div>
+
+	</div>
+{% endblock %}

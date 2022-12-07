@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}My Profile{% endblock %}
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+	<div class="create">
+		<h1>Create a New Thread</h1>
+		<h4>Type your thread into the box below, {{ session.get('username') }}</h4>
+
+		<form id="post-box" action="/create" method="post">
+			<textarea type="text" name="thread-post" maxlength="140"></textarea>
+			<input type="submit" value="Create">
+		</form>
+	</div>
+
+{% endblock %}

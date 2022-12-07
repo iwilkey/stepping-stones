@@ -1,0 +1,5 @@
+Final bug fixes for flikitt!
+
+- I don't know if it's the shitty phone or what (probably not) but those saving and loading times are awful. Consider lesser sample rate and looking into some kind of image compressor. THIS ONE IS IMPORTANT. Granted... I'm sure it would run better on iPhone.
+
+Then ready for 2.0.0 release!

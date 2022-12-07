@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Password Recovery{% endblock %}
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+	<div class="forgot-pass">
+		<h1>Forgot your password?</h1><br>
+		<form action="/forgot" method="post">
+			<input type="text" placeholder="Username" name="username"><br>
+			<input type="text" placeholder="Email linked to account" name="email"><br>
+			<input type="submit" value="Recover">
+		</form><br>
+	</div>
+{% endblock %}

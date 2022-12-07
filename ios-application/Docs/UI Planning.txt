@@ -1,0 +1,31 @@
+Flikitt UI Design 4/8/2020
+
+On the left hand side of the screen, there will be icons that represent subcatagories.
+These subcatagroies can be clicked, and on the bottom of the screen, towards the left and right
+buttons, there will be componets to be edited that pertain to the subcatagories.
+
+On the right of the screen, the green "save" checkmark will remain
+and the export button as well.
+
+The bottom of the screen will have frame control, play and record sound
+
+Tool catagories and subcatagories:
+	- Drawing (Default)
+		- Color
+		- Width
+		- Undo last line
+		- Maybe later on, brush patterns?
+	- Frame Control
+		- Delete frame
+		- Insert blank frame
+		- Copy last frame
+	- Playback
+		- Speed
+		- Scrollable timeline by frame
+			- Goal: Somthing like the camera roll video playback... images and it in seconds
+	- (Later, NOT Priority) Manipulation
+		- Scale
+		- Rotation
+	- (Later, NOT Priority) Camera
+		- Take a picture and draw on it
+

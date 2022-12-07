@@ -1,0 +1,27 @@
+<DOCTYPE html>
+
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/mainstyle.css')}}"/>
+		<title>Authentication Test</title>
+	</head>
+
+	<body id="body">
+
+		<div class="sign-in-form">
+			<h1>Sign up</h1><br>
+			<form action='/signup' method='post'>
+				<input placeholder='Email' name='email'><br>
+				<input placeholder='Username' name='username'><br>
+				<input type="password" placeholder='Password' name='password'><br>
+				<input type="submit" value="Sign up">
+			</form>
+		</div>
+
+	</body>
+
+
+</html>

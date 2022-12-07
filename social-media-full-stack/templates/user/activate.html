@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Activate Account{% endblock %}
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+	<div class="profile">
+		<div id="set">
+			<h1>Attention</h1>
+			<br><br>
+			<p style="color: red"><b>You have not yet activated your account!</b></p>
+			<p>Please follow the directions below to do so.</p>
+			<br>
+
+			<!--- <p>An email has been sent to from threadfeeddotcom@gmail.com futher instructions</p> -->
+
+			<p>An email has been sent to<br><i>{{ get_user(session.get('username'))[5] }}</i> from <i>threadfeeddotcom@gmail.com</i><br>with futher instructions.</p>
+			<br><p>If you cannot find it in your inbox,
+			<br> please check your spam folder.</p>
+
+			<form action="/activate" method="post">
+				<input type="text" placeholder="Activation Code" name="ac">
+				<input type="submit" value="Check">
+			</form>
+		</div>
+	</div>
+{% endblock %}
